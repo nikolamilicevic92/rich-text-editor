@@ -1,0 +1,279 @@
+#RTE *::after,
+#RTE *::before {
+  content: '';
+}
+#RTE {
+  border: 1px solid #d1d1d1;
+  margin-bottom: 10px;
+}
+#RTE * {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+#RTE .clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 1px;
+  visibility: hidden;
+}
+#RTE .btn {
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 13px;
+  font-size: 14px;
+  text-decoration: none;
+}
+#RTE .dark {
+  background-color: #343a40;
+  color: white;
+}
+#RTE .dark:hover {
+  background-color: #060e1c;
+}
+#RTE .hidden {
+  display: none;
+}
+#RTE .form-control {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #555555;
+  border: 1px solid #ccd0d2;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#RTE .form-control:not(.inline) {
+  display: block;
+  width: 100%;
+}
+#RTE .form-control:focus {
+  border-color: #98cbe8;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(152, 203, 232, 0.6);
+} 
+#RTE *:not(span) {
+  font-family: Arial!important;
+}
+#RTE label {
+  font-size: 14px;
+  cursor: pointer;
+}
+#RTE input[type="radio"],
+#RTE input[type="checkbox"] {
+  vertical-align: bottom;
+}
+#RTE iframe {
+  width: 100%;
+  min-height: 450px;
+  border: none;
+}
+#RTE .rte-e-o {
+  padding: 7px 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #d1d1d1;
+}
+#RTE .rte-e-o > * {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+#RTE .rte-e-o > span:hover {
+  background-color: #e5e5e5;
+  outline: 1px solid #bcbcbc;
+  cursor: pointer;
+}
+#RTE .rte-e-o > span:nth-child(1),
+#RTE .rte-e-o > span:nth-child(2),
+#RTE .rte-e-o > span:nth-child(3),
+#RTE .rte-e-o > span:nth-child(4),
+#RTE .rte-e-o > span:nth-child(5) {
+  font-weight: bold;
+  color: black;
+  font-family: Georgia, serif;
+}
+#RTE .rte-e-o > span:nth-child(2) {
+  font-style: italic;
+}
+#RTE .rte-e-o > span:nth-child(3) {
+  text-decoration: line-through;
+}
+#RTE .rte-e-o > span:nth-child(4) {
+  text-decoration: underline;
+}
+#RTE .rte-e-o .rte-align-btn {
+  vertical-align: middle;
+  width: 30px; 
+}
+#RTE .rte-align-btn > span {
+  display: block;
+  height: 1px;
+  background-color: rgb(87, 87, 87);
+  margin-bottom: 3px;
+}
+#RTE .rte-align-btn > span:nth-child(even) {
+  width: 70%;
+}
+#RTE .rte-align-center > span:nth-child(even) {
+  margin-left: 15%;
+}
+#RTE .rte-align-right > span:nth-child(even) {
+  margin-left: 30%;
+}
+#RTE .rte-align-justify > span:nth-child(even) {
+  width: 100%;
+}
+#RTE .rte-e-o > span {
+  padding: 3px 4px;
+  display: inline-block;
+  text-align: center;
+  min-width: 25px;
+}
+#RTE .rte-list {
+  vertical-align: middle;
+}
+#RTE .rte-list > span {
+  display: block;
+  width: 60%;
+  margin-left: 40%;
+  height: 1px;
+  position: relative;
+  background-color: rgb(87, 87, 87);
+}
+#RTE .rte-list > span:not(:last-child) {
+  margin-bottom: 6px;
+}
+#RTE .rte-list > span::before {
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: -1px;
+}
+#RTE .rte-u-list > span::before {
+  width: 3px;
+  height: 3px;
+  background-color: black;
+}
+#RTE .rte-o-list > span::before {
+  content: '1';
+  font-size: 7px;
+  line-height: 7px;
+  font-weight: bold;
+  color: black;
+  top: -3px;
+  left: -7px;
+}
+#RTE .rte-o-list > span:nth-child(2)::before {
+  content: '2';
+}
+#RTE .rte-o-list > span:nth-child(3)::before {
+  content: '3';
+}
+#RTE .rte-link {
+  width: 40px;
+  height: 22px;
+  vertical-align: middle;
+}
+#RTE .rte-link > span {
+  display: block;
+  width: 33%;
+  margin: auto;
+  margin-top: 7px;
+  height: 2px;
+  position: relative;
+  background-color: black;
+}
+#RTE .rte-link > span::before,
+#RTE .rte-link > span::after {
+  display: block;
+  width: 12px;
+  height: 10px;
+  border: 2px solid black;
+  position: absolute;
+  top: -6px;
+}
+#RTE .rte-link > span::before {
+  left: -10px;
+  border-right: none;
+  border-top-left-radius: 30%;
+  border-bottom-left-radius: 30%;
+}
+#RTE .rte-link > span::after {
+  border-left: none;
+  border-top-right-radius: 30%;
+  border-bottom-right-radius: 30%;
+  right: -10px;
+}
+#RTE .rte-image,
+#RTE .rte-video {
+  width: 33px;
+  height: 23px;
+  vertical-align: middle;
+  padding: 3px;
+}
+#RTE .rte-image > span,
+#RTE .rte-video > span {
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  border-radius: 25%;
+  position: relative;
+  top: 1px;
+}
+#RTE .rte-video > span {
+  width: 85%;
+}
+#RTE .rte-image > span::before {
+  position: absolute;
+  left: 10px;
+  top: 3px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+#RTE .rte-image > span::after {
+  position: absolute;
+  display: block;
+  left: 8px;
+  top: -3px;
+  width: 10px;
+  height: 5px;
+  background-color: black;
+  border-radius: 71%;
+}
+#RTE .rte-video > span::after {
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 20px;
+  background-color: black;
+  top: 3px;
+  right: -6px;
+}
+.rte-prompt {
+  position: fixed;
+  z-index: 99;
+  top: 30%;
+  left: 40%;
+  outline: 1px solid #d1d1d1;
+  width: 300px;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+.rte-prompt > div:not(:last-child),
+.rte-prompt > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+.rte-prompt > div.clearfix {
+  margin-top: 10px;
+}
+.rte-prompt > div.clearfix > * {
+  float: right;
+  margin-left: 5px;
+}

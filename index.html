@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rich Text Editor Demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fbfeff;
+    }
+    form {
+      font-family: Verdana, sans-serif;
+      color: rgb(87, 87, 87);
+      width: 800px;
+      margin: auto;
+      padding-top: 15px;
+    }
+    form > div {
+      margin-bottom: 15px;
+    }
+    form > div > label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    form > div > .form-control {
+      padding: 8px 12px;
+      font-size: 14px;
+      color: #555555;
+      border: 1px solid #ccd0d2;
+      border-radius: 4px;
+      display: block;
+      width: 100%;
+    }
+    form > div > .form-control:focus {
+      border-color: #98cbe8;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(152, 203, 232, 0.6);
+    }
+    input[type="submit"] {
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      height: 28px;
+      line-height: 28px;
+      padding: 0 15px;
+      background-color: rgb(0, 132, 255);
+      color: white;
+    }
+    input[type="submit"]:hover {
+      background-color: rgb(0, 121, 235);
+    }
+  </style>
+</head>
+<body>
+  
+  <form action="/posts" method="post">
+    <div>
+      <label for="title">Post title</label>
+      <input type="text" name="title" id="title" class="form-control">
+    </div>
+    <div>
+      <label for="body">Post body</label>
+      <textarea name="body" id="body" class="form-control" style="display:none;">My Awesome Blog Content</textarea>
+      <div id="RTE"></div>
+    </div>
+    <input type="submit" value="Save">
+  </form>
+
+
+
+  <script src="rich-text-editor.js"></script>
+
+  <script>
+    RTE.init({
+      css: 'rich-text-editor.css',
+      // import: ['main.css'],
+      target: document.getElementById('body'),
+      // delay: 300,
+      // onContentChange: content => console.log(content),
+    });
+  </script>
+
+</body>
+</html>
