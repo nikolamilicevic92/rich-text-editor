@@ -149,10 +149,10 @@ class EditorCommand
   
   link(url, text, target) {
     target = target.checked ? "target='_blank'" : ''; 
-    this.html(`<a href='${url} ${target}>${text}</a>`);
+    this.html(`<a href='${url}' ${target}>${text}</a>`);
   }
   
-  image(src, alt, className, id, floatLeft, floatRight) 
+  image(src, alt, width, height, className, id, floatLeft, floatRight) 
   {
     let style = '';
   

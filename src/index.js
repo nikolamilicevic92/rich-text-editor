@@ -4,15 +4,7 @@ import bootstrap from './bootstrap';
 
 const container = $('#RTE');
 
-
-let editor;
-
-
-export function init(config = {}) {
-
-  editor = bootstrap(container, config);
-
-}
+const editor = bootstrap(container)
 
 
 export function content(html = false) {

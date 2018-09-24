@@ -72,13 +72,16 @@ class ImagePrompt
         make('div.clearfix')
           .append([
             make('button', 'Cancel')
+              .attr('type', 'button')
               .attr('class', 'btn dark')
               .on('click', () => this.prompt.hide()),
             make('button', 'Insert')
+              .attr('type', 'button')
               .attr('class', 'btn dark')
               .on('click', () => {
                 this.editor.image(
-                  this.src.value(), this.alt.value(), this.class.value(), 
+                  this.src.value(), this.alt.value(), this.width.value(),
+                  this.height.value(), this.class.value(), 
                   this.id.value(), this.floatLeft.dom(), this.floatRight.dom()
                 );
                 this.prompt.hide();
@@ -90,12 +93,12 @@ class ImagePrompt
 
   reset()
   {
-    this.src.value('');
-    this.alt.value('');
-    this.width.value('');
-    this.height.value('');
-    this.class.value('');
-    this.id.value('');
+    this.src.dom().value = '';
+    this.alt.dom().value = '';
+    this.width.dom().value = '';
+    this.height.dom().value = '';
+    this.class.dom().value = '';
+    this.id.dom().value = '';
     this.floatLeft.dom().checked = false;
     this.floatRight.dom().checked = false;
   }

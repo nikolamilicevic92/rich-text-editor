@@ -82,13 +82,15 @@ class VideoPrompt
         make('div.clearfix')
           .append([
             make('button', 'Cancel')
+              .attr('type', 'button')
               .attr('class', 'btn dark')
               .on('click', () => this.prompt.hide()),
             make('button', 'Insert')
+              .attr('type', 'button')
               .attr('class', 'btn dark')
               .on('click', () => {
                 this.editor._video(
-                  this.src.value(), this.className.value(), 
+                  this.src.value(), this.class.value(), 
                   this.id.value(), this.width.value(), 
                   this.height.value(), this.floatLeft.dom(),
                   this.floatRight.dom(), this.autoplay.dom(), 
@@ -103,11 +105,11 @@ class VideoPrompt
 
   reset()
   {
-    this.src.value('');
-    this.width.value('');
-    this.height.value('');
-    this.class.value('');
-    this.id.value('');
+    this.src.dom().value = '';
+    this.width.dom().value = '';
+    this.height.dom().value = '';
+    this.class.dom().value = '';
+    this.id.dom().value = '';
     this.autoplay.dom().checked = false;
     this.controls.dom().checked = false;
     this.loop.dom().checked = false;

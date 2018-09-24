@@ -39,9 +39,11 @@ class LinkPrompt
         make('div.clearfix')
           .append([
             make('button', 'Cancel')
+              .attr('type', 'button')
               .attr('class', 'btn dark')
               .on('click', () => this.prompt.hide()),
             make('button', 'Insert')
+              .attr('type', 'button')
               .attr('class', 'btn dark')
               .on('click', () => {
                 this.command.link(
@@ -57,8 +59,8 @@ class LinkPrompt
   reset()
   {
     this.target.dom().checked = false;
-    this.url.value('');
-    this.text.value('');
+    this.url.dom().value = '';
+    this.text.dom().value = '';
   }
 
 }

@@ -66,24 +66,17 @@
     <div>
       <label for="body">Post body</label>
       <textarea name="body" id="body" class="form-control" style="display:none;">My Awesome Blog Content</textarea>
-      <div id="RTE"></div>
+
+      <!-- Make this div where you want editor to fit. Give it an id "RTE" and specify id of the textarea where content
+      will be streamed to and a path to editors css file. -->
+      <div id="RTE" data-target="body" data-css="rich-text-editor.css"></div>
+
     </div>
     <input type="submit" value="Save">
   </form>
 
 
-
   <script src="rich-text-editor.js"></script>
-
-  <script>
-    RTE.init({
-      css: 'rich-text-editor.css',
-      // import: ['main.css'],
-      target: document.getElementById('body'),
-      // delay: 300,
-      // onContentChange: content => console.log(content),
-    });
-  </script>
 
 </body>
 </html>
